@@ -1,0 +1,4 @@
+#!/bin/sh
+# KEYWORD: open-sesame
+# PROVIDES: bar
+# REQUIRES: foo

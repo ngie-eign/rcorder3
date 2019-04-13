@@ -1,0 +1,3 @@
+#!/bin/sh
+# REQUIRES: service2
+# PROVIDES: bar

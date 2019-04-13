@@ -1,0 +1,3 @@
+baz
+bing
+bar

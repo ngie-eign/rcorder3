@@ -1,0 +1,3 @@
+rcorder: Circular dependency on file `foo'.
+rcorder: Circular dependency on provision `bar' in file `foo'.
+rcorder: Circular dependency on file `bar'.

@@ -1,0 +1,3 @@
+#!/bin/sh
+# PROVIDES: foo
+# REQUIRES: baz
