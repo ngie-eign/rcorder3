@@ -2,11 +2,12 @@
 
 This project's goals are to provide a framework, compatible with the format
 described in [rcorder(8)](https://www.freebsd.org/cgi/man.cgi?rcorder(8)), which
-will allow FreeBSD to do move beyond serial booting to permit parallel booting.
+will allow FreeBSD to do move beyond serialized booting and shutdown to
+parallelized booting and shutdown.
 
-The initial proof-of-concept will be written in a format usable with python 3.7,
-but will be reworked/rewritten in modern (C++14+) C++, so it can be added to
-the FreeBSD base system.
+The initial proof-of-concept will be written in a format usable with python
+3.6/3.7, but will be reworked/rewritten in modern (C++14+) C++, so it can be
+added to the FreeBSD base system.
 
 # Problem Statement
 
@@ -22,4 +23,7 @@ supports serial booting via
 While this rc(8) can be optimized to run quickly, long-running processes that
 rely on system events, e.g., dhclient(8), block system boot until it has
 received a DHCP ticket. Long-running/slow services like this in aggregate can
-become a hinderance for boot progress.
+become a hinderance for boot progress on multiprocessor systems.
+
+A similar issue exists with the shutdown process, as it is done effectively in
+reverse to rc(8), via rc.shutdown(8).
